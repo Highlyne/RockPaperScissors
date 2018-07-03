@@ -26,21 +26,31 @@ function makeComputerChoice() {
   const computerChoice = ["r", "p", "s"];
   const randomNumber = Math.floor(Math.random()*3);
   return computerChoice[randomNumber];
-};
+}
 
+function win() {
+  wins++;
+  userScore_span.innerHTML= wins
+}
 
+function lose() {
+  losses++;
+  computerScore_span.innerHTML = losses
+}
 function game(userChoice) {
   const computerPick = makeComputerChoice();
   switch (userChoice + computerPick) {
     case "rs":
     case "pr":
     case "sp":
-    console.log("You Win " + userChoice + computerPick);
+    win();
+
     break;
     case "rp":
     case "ps":
     case "sr":
     console.log("You Lose " + userChoice + computerPick);
+    lose();
     break;
     case "rr":
     case "pp":
