@@ -2,8 +2,7 @@
 // ====================================
 console.log("hello");
 
-// Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-var computerChoices = ["r", "p", "s"];
+
 
 // Creating variables to hold the number of wins, losses, and ties. They start at 0.
 var wins = 0;
@@ -21,9 +20,34 @@ const scissor_div = document.getElementById('s');
 
 // 2. Make functions to operate the Game
 // ======================================
+// Get computer's  choice-  use Math.Floor to round random numbers down to the nearest whole number. use Math.Random to populate a random number between 0 and 3
+function makeComputerChoice() {
+  // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+  const computerChoice = ["r", "p", "s"];
+  const randomNumber = Math.floor(Math.random()*3);
+  return computerChoice[randomNumber];
+};
+
 
 function game(userChoice) {
-  console.log("Here is the user's pick " + userChoice);
+  const computerPick = makeComputerChoice();
+  switch (userChoice + computerPick) {
+    case "rs":
+    case "pr":
+    case "sp":
+    console.log("You Win " + userChoice + computerPick);
+    break;
+    case "rp":
+    case "ps":
+    case "sr":
+    console.log("You Lose " + userChoice + computerPick);
+    break;
+    case "rr":
+    case "pp":
+    case "ss":
+    console.log("We Tie " + userChoice + computerPick);
+    break;
+  }
 };
  
 
@@ -45,3 +69,4 @@ scissor_div.addEventListener("click", function() {
 }
 
 main();
+makeComputerChoice();
