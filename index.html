@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rock, Paper, Scissor</title>
-     
+
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- jQuery uncompressed CDN -->
@@ -15,31 +15,34 @@
 
 <body>
     <header>Rock Paper Scissors</header>
+    <br><br>
 
     <div class="score-chart">
-        <span id="user-score">0</span>
-        <span id="comp-score">0</span>
+        <h1>Your Score:</h1><span id="user-score">0</span>
+        <h1>Computer Score:</h1><span id="comp-score">0</span>
     </div>
 
-    <div class="result">
-        <p>You Win!</p>
-    </div>
-<div class="choice" id="r">
-    <img src="assets/images/Rock.png">
-</div>
-<div class="choice" id="p">
-    <img src="assets/images/paper-emoji-collection-004.jpg">
-</div>
-<div class="choice" id="s">
-    <img src="assets/images/scissors-clip-art-cartoon-illustration-funny-32879166.jpg">
-</div>
+    <span id="results">Let's Play!</span>
 
-    
+    <!-- <div class="flex-container"> -->
+        <div class="rock-container" id="rock">
+            <img src="assets/images/Rock.png">
+        <div class="middle">
+            <div class="text">Rock</div>
+        </div>
+            <div class="choice" id="paper">
+                <img src="assets/images/paper-emoji-collection-004.jpg">
+            </div>
+            <div class="choice" id="scissor">
+                <img src="assets/images/scissors-clip-art-cartoon-illustration-funny-32879166.jpg">
+            </div>
+    <!-- </div> -->
 
 
 
-  
-    <script type="text/javascript" src="assets/scripts/javaScript.js"></script>
+
+
+        <script type="text/javascript" src="assets/scripts/javaScript.js"></script>
 </body>
 
 </html>
