@@ -8,6 +8,19 @@ header {
     font-size: 50pt;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
 img {
     height: 100px;
     width: 100px;
@@ -20,35 +33,14 @@ img {
     backface-visibility: hidden;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
-
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
-
 .rock-container:hover .image {
     opacity: 0.3;
   }
   
-  .rock-container:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
+#rock {
+    height: 150px;
+    width: 150px;
+}
 
   .green-glow {
       border: 4px solid green;

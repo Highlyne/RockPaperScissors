@@ -16,19 +16,19 @@
 <body>
     <header>Rock Paper Scissors</header>
     <br><br>
-
-    <div class="score-chart">
-        <h1>Your Score:</h1><span id="user-score">0</span>
-        <h1>Computer Score:</h1><span id="comp-score">0</span>
-    </div>
-
     <span id="results">Let's Play!</span>
-
-    <!-- <div class="flex-container"> -->
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="score-chart">
+            <h1>Your Score:</h1><span id="user-score">0</span>
+            <br>
+            <h1>Computer Score:</h1><span id="comp-score">0</span>
+           
+        </div>
+    </div>
+    <div class="grid-item">  
         <div class="rock-container" id="rock">
             <img src="assets/images/Rock.png">
-        <div class="middle">
-            <div class="text">Rock</div>
         </div>
             <div class="choice" id="paper">
                 <img src="assets/images/paper-img-2.png">
@@ -36,8 +36,14 @@
             <div class="choice" id="scissor">
                 <img src="assets/images/scissors-emoji-cartoon-014-512.png">
             </div>
-    <!-- </div> -->
-
+    </div>
+    <div class="grid-item">
+        <div class="score-chart">
+                <h1>Chat Box</h1>
+                <textarea>Chat content will go here</textarea>
+            </div>
+    </div>
+</div>
 
 
 
